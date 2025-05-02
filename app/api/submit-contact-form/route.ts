@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 // Initialize Resend with your API key from environment variable
-const resend = new Resend("re_ZwnBvBCa_6bC4MFkdi6Z4a6w6VBRfVVvE");
+const resend = new Resend("process.env.RESEND_API_KEY");
 
 export async function POST(req: Request) {
   // Parse incoming JSON data from the request
