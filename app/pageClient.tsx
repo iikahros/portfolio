@@ -61,7 +61,7 @@ export default function PageClient() {
                     </span>
                   </h1>
                   <p className="mx-auto md:mx-0 max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                    I am {" "}
+                    I am Aakash Kumar {" "}
                     <span className="text-pink-500 font-semibold">
                       <Typewriter
                         words={[
