@@ -11,7 +11,7 @@ const technologies = [
   },
   {
     category: "Backend",
-    skills: ["Node.js", "Flask", "Python", "Java"],
+    skills: ["Node.js", "Flask", "Python", "Java", "Resend"],
     color: "from-purple-500 to-indigo-500",
     bgColor: "bg-purple-100 dark:bg-purple-900/20",
     textColor: "text-purple-700 dark:text-purple-300",
@@ -27,7 +27,7 @@ const technologies = [
   },
   {
     category: "Tools",
-    skills: ["VS Code", "Adobe CC", "Figma", "TouchDesigner", "Yolo", "Ultralytics"],
+    skills: ["VS Code", "Adobe CC", "Figma", "TouchDesigner", "Yolo", "Ultralytics", "Vercel"],
     color: "from-blue-500 to-cyan-500",
     bgColor: "bg-blue-100 dark:bg-blue-900/20",
     textColor: "text-blue-700 dark:text-blue-300",
