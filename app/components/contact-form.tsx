@@ -24,7 +24,7 @@ export default function ContactForm() {
     const messageContent = formData.get("message") as string
   
     try {
-      const res = await fetch("/api/submit-contact-form/route.ts", {
+      const res = await fetch("./api/submit-contact-form/route.ts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
