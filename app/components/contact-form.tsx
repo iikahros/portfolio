@@ -16,13 +16,13 @@ export default function ContactForm() {
     setPending(true)
     setMessage("")
     setStatus("")
-
+  
     const form = event.currentTarget
     const formData = new FormData(form)
     const name = formData.get("name") as string
     const email = formData.get("email") as string
     const messageContent = formData.get("message") as string
-
+  
     try {
       const res = await fetch("/api/submit-contact-form", {
         method: "POST",
@@ -31,13 +31,19 @@ export default function ContactForm() {
         },
         body: JSON.stringify({ name, email, message: messageContent }),
       })
-
-      const data = await res.json()
-
+  
+      let data
+      try {
+        const text = await res.text()
+        data = JSON.parse(text)
+      } catch {
+        throw new Error("Invalid response from server")
+      }
+  
       if (!res.ok) {
         throw new Error(data.message || "Unknown error")
       }
-
+  
       setMessage(data.message || "Thanks! I'll get back to you.")
       setStatus("success")
       form.reset()
@@ -48,6 +54,7 @@ export default function ContactForm() {
       setPending(false)
     }
   }
+  
 
   return (
     <Card className="p-6 border-2 hover:border-indigo-300 dark:hover:border-indigo-700 transition-all duration-300 shadow-lg">
